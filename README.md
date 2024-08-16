@@ -4,7 +4,8 @@ oura ringから特定期間のデータを抽出するPythonスクリプトで�
 必要なライブラリは適宜インストールしてください。
 
 ## 使い方
-```python .\daily_activity.py 
+```
+python .\daily_activity.py 
     -configfile_path "C:/Workspace/python/oura_ring/config/config.ini" 
     -start_date 2024-08-01 
     -end_date 2024-08-10 
