@@ -1,0 +1,7 @@
+status_number,status
+0,non wear
+1,rest
+2,inactive
+3,low activity
+4,medium activity
+5,high activity
