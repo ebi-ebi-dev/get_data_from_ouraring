@@ -1,0 +1,5 @@
+status_number,status
+1,deep sleep
+2,light sleep
+3,REM sleep
+4,awake

@@ -1,0 +1,27 @@
+score:アクティビティスコア範囲内[1, 100]
+active_calories:消費カロリー（キロカロリー）
+average_met_minut:平均代謝当量（MET）（分）
+meet_daily_targets:過去7日間の毎日の活動目標を[1、100]の範囲内で達成することの貢献。
+move_every_hour:エネルギー消費量の歩行距離（メートル）
+recovery_time:過去7日間の回復時間の寄与は範囲[1, 100]内。
+stay_active:過去24時間の活動の寄与は範囲[1, 100]内。
+training_frequency:過去7日間の運動頻度の寄与は範囲[1, 100]内。
+training_volume:過去7日間の運動量の寄与は範囲[1, 100]内。
+equivalent_walking_distance:エネルギー消費量の歩行距離（メートル）
+high_activity_met_minutes:数分間の高活動代謝当量（MET）
+high_activity_time:秒単位の高活動代謝当量（MET）
+inactivity_alerts:受信した非アクティブアラートの数
+low_activity_met_minutes:低活動代謝当量（MET）（分）
+low_activity_time:低活動代謝当量（MET）（秒単位）
+medium_activity_met_minutes:中程度の活動代謝当量（MET）（分）
+medium_activity_time:中程度の活動代謝当量（MET）（秒）
+meters_to_target:目標までの残りメートル数
+non_wear_time:指輪が装着されていなかった時間（秒）
+resting_time:休憩時間（秒）
+sedentary_met_minutes:座位代謝当量（MET）（分）
+sedentary_time:座りっぱなしの時間、座位代謝当量（MET）（秒）
+steps:歩数合計
+target_calories:1日の活動目標（キロカロリー）
+target_meters:1日の活動目標（メートル単位）
+total_calories:消費カロリー合計（キロカロリー）
+recording_timestamp:毎日のアクティビティが発生した開始日時を示す ISO 8601 形式のローカル タイムスタンプ
