@@ -15,6 +15,7 @@ parser.add_argument('-configfile_path', help="C:\Workspace\python\oura_ring\get_
 parser.add_argument('-start_date', help='yyyy-MM-dd')
 parser.add_argument('-end_date', help='yyyy-MM-dd')
 parser.add_argument('-output_path', help="C:/Workspace/python/oura_ring/get_data_from_ouraring/output")
+parser.add_argument('-timezone', required = False, default = "09:00", help="set timezone as 'HH:MM'format. default: '09:00'")
 args = parser.parse_args()
 
 # config
@@ -57,7 +58,9 @@ MOVEMENT_INTERVAL = 30
 SLEEP_5_MIN_INTERVAL = 5
 
 # タイムゾーンを表す文字列をAPIに合わせて指定しておく。
-TIMEZONE = "09:00"
+TIMEZONE = args.timezone
+
+print(args.timezone)
 
 basic_data ={
     "id": [],
