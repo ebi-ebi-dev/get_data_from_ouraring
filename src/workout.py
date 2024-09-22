@@ -51,6 +51,9 @@ params = {
     "next_token": ""
 }
 
+# タイムゾーンを表す文字列をAPIに合わせて指定しておく。
+TIMEZONE = "09:00"
+
 basic_data ={
     "id": [],
     "activity": [],
@@ -87,7 +90,10 @@ def main():
             # basic info
             for b_data in data:
                 for key, value in b_data.items():
-                    if(key in basic_data):
+                    if(key == "start_datetime" or key == "end_datetime"):
+                        tmp_timestamp = datetime.datetime.strptime(b_data[key], '%Y-%m-%dT%H:%M:%S+' + TIMEZONE)
+                        basic_data[key].append(tmp_timestamp)
+                    else:
                         basic_data[key].append(value)
             output_file_path = args.output_path + "/workout_" + args.start_date + "~" + args.end_date + ".csv"
             print(output_file_path)

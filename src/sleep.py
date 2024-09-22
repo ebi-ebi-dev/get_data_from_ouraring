@@ -89,7 +89,6 @@ basic_data ={
     "readiness_score_delta": [],
     "rem_sleep_duration": [],
     "restless_periods": [],
-    "sleep_phase_5_min": [],
     "sleep_score_delta": [],
     "sleep_algorithm_version": [],
     "time_in_bed": [],
@@ -145,11 +144,15 @@ def main():
             for b_data in data:
                 for key, value in b_data.items():
                     if(key in basic_data):
-                        basic_data[key].append(value)
+                        if(key == "bedtime_start" or key == "bedtime_end"):
+                            tmp_timestamp = datetime.datetime.strptime(b_data[key], '%Y-%m-%dT%H:%M:%S+' + TIMEZONE)
+                            basic_data[key].append(tmp_timestamp)
+                        else:
+                            basic_data[key].append(value)
                     elif(key == "readiness"):
                         for r_key, r_v in b_data["readiness"].items():
                             if(r_key in basic_data):
-                                basic_data[r_key].append(value)
+                                basic_data[r_key].append(r_v)
                             elif(r_key == "contributors"):
                                 for cntr_k, cntr_v in b_data["readiness"]["contributors"].items():
                                     if(cntr_k in basic_data):
