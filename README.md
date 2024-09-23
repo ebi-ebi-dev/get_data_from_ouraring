@@ -31,8 +31,8 @@ APIの都合で、start_date + 1～end_dateまでのデータを取得します�
 |daily_sleep|daily_sleep.py|daily_sleep_yyyy-MM-dd~yyyy-MM-dd.csv|
 |daily_spo2|daily_spo2.py|daily_spo2_yyyy-MM-dd~yyyy-MM-dd.csv|
 |sleep_time|sleep_time.py|sleep_time_yyyy-MM-dd~yyyy-MM-dd.csv|
-|sleep|sleep.py|sleep_yyyy-MM-dd~yyyy-MM-dd.csv<br>sleep_hartrate_and_hrv_yyyy-MM-dd~yyyy-MM-dd.csv<br>sleep_movement30sec_yyyy-MM-dd~yyyy-MM-dd.csv<br>sleep_sleepphase5min_yyyy-MM-dd~yyyy-MM-dd.csv|
-|workout|workout.py|workout_yyyy-MM-dd~yyyy-MM-dd.csv|
+|sleep|sleep.py|sleep_yyyy-MM-dd\~yyyy-MM-dd.csv<br>sleep_hartrate_and_hrv_yyyy-MM-dd\~yyyy-MM-dd.csv<br>sleep_movement30sec_yyyy-MM-dd\~yyyy-MM-dd.csv<br>sleep_sleepphase5min_yyyy-MM-dd\~yyyy-MM-dd.csv|
+|workout|workout.py|workout_yyyy-MM-dd\~yyyy-MM-dd.csv|
 
 それぞれの指標の意味はこちらの記事が非常に参考になります。
 
