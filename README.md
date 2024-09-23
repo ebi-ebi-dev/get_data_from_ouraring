@@ -26,12 +26,12 @@ APIの都合で、start_date + 1～end_dateまでのデータを取得します�
 本リポジトリでは下記の指標をCSVとして出力するソースを用意しています。
 |指標|スクリプト名|出力されるCSV|
 ----|----|----
-|daily_activity|daily_activity.py|yyyy-MM-dd~yyyy-MM-dd.csv <br> yyyy-MM-dd~yyyy-MM-dd_per5min.csv|
+|daily_activity|daily_activity.py|yyyy-MM-dd\~yyyy-MM-dd.csv<br>yyyy-MM-dd\~yyyy-MM-dd_per5min.csv|
 |daily_readiness|daily_readiness.py|daily_readiness_yyyy-MM-dd~yyyy-MM-dd.csv|
 |daily_sleep|daily_sleep.py|daily_sleep_yyyy-MM-dd~yyyy-MM-dd.csv|
 |daily_spo2|daily_spo2.py|daily_spo2_yyyy-MM-dd~yyyy-MM-dd.csv|
 |sleep_time|sleep_time.py|sleep_time_yyyy-MM-dd~yyyy-MM-dd.csv|
-|sleep|sleep.py|sleep_yyyy-MM-dd~yyyy-MM-dd.csv <br> sleep_hartrate_and_hrv_yyyy-MM-dd~yyyy-MM-dd.csv <br> sleep_movement30sec_yyyy-MM-dd~yyyy-MM-dd.csv <br> sleep_sleepphase5min_yyyy-MM-dd~yyyy-MM-dd.csv|
+|sleep|sleep.py|sleep_yyyy-MM-dd~yyyy-MM-dd.csv<br>sleep_hartrate_and_hrv_yyyy-MM-dd~yyyy-MM-dd.csv<br>sleep_movement30sec_yyyy-MM-dd~yyyy-MM-dd.csv<br>sleep_sleepphase5min_yyyy-MM-dd~yyyy-MM-dd.csv|
 |workout|workout.py|workout_yyyy-MM-dd~yyyy-MM-dd.csv|
 
 それぞれの指標の意味はこちらの記事が非常に参考になります。
