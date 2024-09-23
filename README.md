@@ -12,7 +12,7 @@ python .\daily_activity.py
     -output_path "C:/Workspace/python/oura_ring/output"
 ```
 * cofigfile_path
-ouraringのデータへアクセスるためのAPIアクセストークン及び、ログ情報を出力するパスを記載したコンフィグファイルのパスを指定します。
+ouraringのデータへアクセスするためのAPIアクセストークン及び、ログ情報を出力するパスを記載したコンフィグファイルのパスを指定します。
 書き方はconfig/template.iniをご覧ください。「XXXXXX…」の部分にアクセストークンを記載ください。
 
 * start_date/end_date
@@ -52,16 +52,6 @@ APIの都合で、start_date + 1～end_dateまでのデータを取得します�
 ```
 class_5_min: "001122334455"
 ```
-公式によると、各番号が意味するところは以下です。
-|番号|ステータス|
-|----|----|
-|0|non wear|
-|1|rest|
-|2|inactive|
-|3|low activity|
-|4|medium activity|
-|5|high activity|
-
 したがって、下記のように加工しています。
 
 |id|start_recording|end_recording|status_number|
@@ -84,10 +74,21 @@ class_5_min: "001122334455"
 
 ## ステータス番号のマスタデータ
 outputフォルダに各status_numberとその意味の対応表を用意しています。
-分析する際は、下記CSVの**idカラムを紐づけて**分析してみてください。
+
 |CSV|対応するマスタデータ|
 |----|----|
 |yyyy-MM-dd~yyyy-MM-dd_per5min.csv|M_dailyactivity_class5min.csv|
 |sleep_movement30sec_yyyy-MM-dd~yyyy-MM-dd.csv|M_sleep_movement30sec.csv|
 |sleep_sleepphase5min_yyyy-MM-dd~yyyy-MM-dd.csv|M_sleep_sleepphase5min.csv|
 
+daily_activityのclass_5_minを例にとると、M_dailyactivity_class5min.csvの中身は下記のようになっています。
+|status_number|status|
+|----|----|
+|0|non wear|
+|1|rest|
+|2|inactive|
+|3|low activity|
+|4|medium activity|
+|5|high activity|
+
+分析する際は、下記CSVの**status_nuimberカラムを紐づけて**分析してみてください。
