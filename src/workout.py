@@ -15,7 +15,6 @@ parser.add_argument('-configfile_path', help="C:\Workspace\python\oura_ring\get_
 parser.add_argument('-start_date', help='yyyy-MM-dd')
 parser.add_argument('-end_date', help='yyyy-MM-dd')
 parser.add_argument('-output_path', help="C:/Workspace/python/oura_ring/get_data_from_ouraring/output")
-parser.add_argument('-timezone', required = False, default = "09:00", help="set timezone as 'HH:MM'format. default: '09:00'")
 args = parser.parse_args()
 
 # config
@@ -92,7 +91,8 @@ def main():
             for b_data in data:
                 for key, value in b_data.items():
                     if(key == "start_datetime" or key == "end_datetime"):
-                        tmp_timestamp = datetime.datetime.strptime(b_data[key], '%Y-%m-%dT%H:%M:%S+' + TIMEZONE)
+                        print(b_data[key][:-6])
+                        tmp_timestamp = datetime.datetime.strptime(b_data[key][:-6], '%Y-%m-%dT%H:%M:%S')
                         basic_data[key].append(tmp_timestamp)
                     else:
                         basic_data[key].append(value)
